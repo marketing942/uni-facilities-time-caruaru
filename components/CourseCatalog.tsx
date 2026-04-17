@@ -19,18 +19,18 @@ const INSTAGRAM_URL = "https://www.instagram.com/unicive.caruaru";
 const GREEN = "#006B52";
 const GOLD = "#F5C55A";
 
-const levels: CourseLevel[] = ["graduacao", "tecnologo", "pos-graduacao"];
+const levels: CourseLevel[] = ["licenciatura", "tecnologo", "pos-graduacao"];
 const areas: CourseArea[] = [
-  "tecnologia",
-  "negocios",
-  "humanas",
-  "saude",
-  "exatas",
-  "educacao",
-  "juridico",
-  "criativo",
   "agronegocio",
-  "outros",
+  "comunicacao",
+  "juridico",
+  "educacao",
+  "engenharia",
+  "financas",
+  "negocios",
+  "gestao-publica",
+  "saude",
+  "tecnologia",
 ];
 
 export default function CourseCatalog() {
@@ -49,7 +49,7 @@ export default function CourseCatalog() {
   const levelCounts = useMemo(() => {
     const counts: Record<CourseLevel | "all", number> = {
       all: courses.length,
-      graduacao: 0,
+      licenciatura: 0,
       tecnologo: 0,
       "pos-graduacao": 0,
     };
@@ -626,7 +626,7 @@ function GroupSection({
 
 function getPriceRange(level: CourseLevel): string {
   switch (level) {
-    case "graduacao":
+    case "licenciatura":
       return "a partir de R$119/mês";
     case "tecnologo":
       return "a partir de R$99/mês";
