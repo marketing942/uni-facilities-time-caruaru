@@ -9,14 +9,16 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: "Unicive Polo Caruaru – Catálogo de Cursos",
-  description: "Consulte todos os cursos disponíveis na Unicive Polo Caruaru-PE: Graduação, Tecnólogo e Pós-graduação 100% EAD.",
+  description:
+    "Encontre o curso ideal na Unicive Polo Caruaru-PE. Mais de 150 cursos 100% EAD: Graduação, Tecnólogo e Pós-graduação. Reconhecida pelo MEC com nota máxima.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" className={`${geist.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>

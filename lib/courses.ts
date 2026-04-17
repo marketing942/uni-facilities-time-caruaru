@@ -24,6 +24,8 @@ export interface Course {
   type: CourseType;
   duration?: string;
   priceFrom?: string;
+  isFeatured?: boolean;
+  featuredNote?: string;
 }
 
 export const courses: Course[] = [
@@ -98,17 +100,19 @@ export const courses: Course[] = [
   // TECNÓLOGO - Gestão e Negócios
   { name: "Gestão Comercial", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês" },
   { name: "Gestão Financeira", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês" },
+  { name: "Recursos Humanos", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês", isFeatured: true },
   { name: "Gestão de RH", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês" },
   { name: "Gestão Pública", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês" },
   { name: "Gestão de Investimentos", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês" },
   { name: "Gestão da Qualidade", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês" },
   { name: "Gestão da Produção Industrial", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês" },
   { name: "Processos Gerenciais", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês" },
-  { name: "Logística", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês" },
-  { name: "Marketing / Marketing Digital", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês" },
+  { name: "Logística", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês", isFeatured: true },
+  { name: "Marketing", level: "tecnologo", area: "negocios", type: "Tecnólogo", priceFrom: "R$99/mês", isFeatured: true },
 
   // TECNÓLOGO - Jurídico
-  { name: "Serviços Jurídicos", level: "tecnologo", area: "juridico", type: "Tecnólogo", priceFrom: "R$99/mês" },
+  { name: "Serviços Jurídicos", level: "tecnologo", area: "juridico", type: "Tecnólogo", priceFrom: "R$99/mês", isFeatured: true, featuredNote: "Mais indicado para concursos" },
+  { name: "Segurança Privada", level: "tecnologo", area: "juridico", type: "Tecnólogo", priceFrom: "R$99/mês", isFeatured: true },
   { name: "Perícia Judicial", level: "tecnologo", area: "juridico", type: "Tecnólogo", priceFrom: "R$99/mês" },
   { name: "Investigação e Perícia Judicial", level: "tecnologo", area: "juridico", type: "Tecnólogo", priceFrom: "R$99/mês" },
   { name: "Segurança Pública", level: "tecnologo", area: "juridico", type: "Tecnólogo", priceFrom: "R$99/mês" },

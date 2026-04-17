@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="16" fill="#006B52"/>
+  <!-- Top-left: gold rectangle -->
+  <rect x="10" y="10" width="35" height="30" rx="4" fill="#F5C55A"/>
+  <!-- Top-right: white D-shape -->
+  <path d="M55 10 h18 a20 20 0 0 1 0 40 h-18 Z" fill="white"/>
+  <!-- Bottom-left: gold rounded bottom -->
+  <path d="M10 55 h35 v20 a18 18 0 0 1-35 0 Z" fill="#F5C55A"/>
+  <!-- Bottom-right: white rounded bottom -->
+  <path d="M55 55 h18 a18 18 0 0 1 0 35 h-18 Z" fill="white"/>
+</svg>
