@@ -181,18 +181,38 @@ export default function CourseCatalog() {
           Pós-graduação
         </p>
 
-        {/* MEC Badge */}
-        <div
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
-          style={{
-            background: "rgba(245,197,90,0.15)",
-            border: "1px solid rgba(245,197,90,0.35)",
-          }}
-        >
-          <span className="text-sm">⭐⭐⭐⭐⭐</span>
-          <span className="text-xs font-semibold text-white/90">
-            Reconhecida pelo MEC · Nota Máxima
-          </span>
+        {/* MEC + CREA Badges */}
+        <div className="flex flex-wrap justify-center gap-2 mb-6">
+          <a
+            href="https://emec.mec.gov.br/emec/consulta-cadastro/detalhes-ies/d96957f455f6405d14c6542552b0f6eb/MzY0OQ=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full transition-all hover:scale-105"
+            style={{
+              background: "rgba(245,197,90,0.15)",
+              border: "1px solid rgba(245,197,90,0.35)",
+            }}
+          >
+            <span className="text-sm">⭐⭐⭐⭐⭐</span>
+            <span className="text-xs font-semibold text-white/90">
+              Reconhecida pelo MEC · Nota Máxima
+            </span>
+          </a>
+          <a
+            href="https://sites.google.com/unicv.edu.br/ces/p%C3%A1gina-inicial?authuser=2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full transition-all hover:scale-105"
+            style={{
+              background: "rgba(245,197,90,0.15)",
+              border: "1px solid rgba(245,197,90,0.35)",
+            }}
+          >
+            <span className="text-sm">🏛️</span>
+            <span className="text-xs font-semibold text-white/90">
+              Reconhecida pelo CES · MEC
+            </span>
+          </a>
         </div>
 
         {/* Search */}
@@ -344,9 +364,25 @@ export default function CourseCatalog() {
         <p className="text-white/70 text-sm mt-1">
           Polo Caruaru · PE · Cursos 100% EAD
         </p>
-        <p className="text-white/60 text-xs mt-2">
-          ⭐⭐⭐⭐⭐ Reconhecida pelo MEC · Nota Máxima
-        </p>
+        <div className="flex flex-wrap justify-center gap-3 mt-2">
+          <a
+            href="https://emec.mec.gov.br/emec/consulta-cadastro/detalhes-ies/d96957f455f6405d14c6542552b0f6eb/MzY0OQ=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/60 hover:text-white text-xs transition-colors"
+          >
+            ⭐⭐⭐⭐⭐ Nota Máxima MEC
+          </a>
+          <span className="text-white/30 text-xs">·</span>
+          <a
+            href="https://sites.google.com/unicv.edu.br/ces/p%C3%A1gina-inicial?authuser=2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/60 hover:text-white text-xs transition-colors"
+          >
+            🏛️ Reconhecida pelo CES · MEC
+          </a>
+        </div>
         <div className="flex justify-center gap-5 mt-5">
           <a
             href={INSTAGRAM_URL}
