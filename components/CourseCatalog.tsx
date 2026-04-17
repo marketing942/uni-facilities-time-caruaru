@@ -144,28 +144,6 @@ export default function CourseCatalog() {
         </div>
       </header>
 
-      {/* ── CPPEM BANNER ── */}
-      <div style={{ background: "#003D2B" }} className="border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <p className="text-xs text-white/80 leading-snug">
-            <span className="font-bold" style={{ color: GOLD }}>
-              Estuda para concursos de carreiras policiais?
-            </span>{" "}
-            Fale com o Cppem e garanta condição especial em turmas, mentorias,
-            cursos e materiais de estudo.
-          </p>
-          <a
-            href="https://links.cppem.com.br/cppem-contato"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shrink-0 inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full transition-all hover:scale-105 whitespace-nowrap"
-            style={{ background: GOLD, color: "#003D2B" }}
-          >
-            Falar com o Cppem →
-          </a>
-        </div>
-      </div>
-
       {/* ── HERO ── */}
       <section
         className="py-10 px-4 text-center text-white"
@@ -225,7 +203,11 @@ export default function CourseCatalog() {
             placeholder="Buscar curso..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-11 pr-4 py-3 rounded-full text-gray-800 text-sm outline-none shadow-xl focus:ring-2 focus:ring-white/50"
+            className="w-full pl-11 pr-4 py-3 rounded-full text-white text-sm outline-none focus:ring-2 focus:ring-white/40 placeholder:text-white/50"
+            style={{
+              background: "rgba(0,0,0,0.25)",
+              border: "1px solid rgba(255,255,255,0.25)",
+            }}
           />
         </div>
       </section>
@@ -352,6 +334,25 @@ export default function CourseCatalog() {
           </div>
         )}
       </main>
+
+      {/* ── CPPEM DISCRETE NOTE ── */}
+      <div className="border-t border-gray-200 bg-white">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3">
+          <p className="text-xs text-gray-400 leading-snug">
+            Estuda para concursos de carreiras policiais? O{" "}
+            <a
+              href="https://links.cppem.com.br/cppem-contato"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold underline underline-offset-2 hover:text-gray-600 transition-colors"
+              style={{ color: GREEN }}
+            >
+              Cppem
+            </a>{" "}
+            oferece condição especial em turmas, mentorias, cursos e materiais de estudo.
+          </p>
+        </div>
+      </div>
 
       {/* ── FOOTER ── */}
       <footer
