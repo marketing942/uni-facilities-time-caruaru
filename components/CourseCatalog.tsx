@@ -39,7 +39,10 @@ export default function CourseCatalog() {
   const [search, setSearch] = useState("");
 
   const featuredCourses = useMemo(
-    () => courses.filter((c) => c.isFeatured),
+    () =>
+      courses
+        .filter((c) => c.isFeatured)
+        .sort((a, b) => (a.featuredRank ?? 99) - (b.featuredRank ?? 99)),
     []
   );
 
@@ -140,6 +143,28 @@ export default function CourseCatalog() {
           </div>
         </div>
       </header>
+
+      {/* ── CPPEM BANNER ── */}
+      <div style={{ background: "#003D2B" }} className="border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <p className="text-xs text-white/80 leading-snug">
+            <span className="font-bold" style={{ color: GOLD }}>
+              Estuda para concursos de carreiras policiais?
+            </span>{" "}
+            Fale com o Cppem e garanta condição especial em turmas, mentorias,
+            cursos e materiais de estudo.
+          </p>
+          <a
+            href="https://links.cppem.com.br/cppem-contato"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full transition-all hover:scale-105 whitespace-nowrap"
+            style={{ background: GOLD, color: "#003D2B" }}
+          >
+            Falar com o Cppem →
+          </a>
+        </div>
+      </div>
 
       {/* ── HERO ── */}
       <section
